@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery</title>
+        <style>
+            #janela {
+                position: absolute;
+                width: 300px;
+                height: 300px;
+                background-color: #069;
+                left: 0; /* Posição inicial para a lateral */
+                top: 0; /* Posição inicial para o movimento vertical */
+            }
+            
+            #baixo {
+                position: 400px; /* Para garantir que o botão apareça */
+                margin-top: 320px; /* Adiciona margem para evitar sobreposição */
+            }
+        </style>
+        <!-- Carregar jQuery de um CDN -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#baixo').click(function() {
+                    $('#janela').animate({top: '+=500px'}, 1000); // Movimento para baixo em 300px
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <input type="button" id="baixo" value="Mover para baixo" />
+        <div id="janela"></div>
+    </body>
+</html>

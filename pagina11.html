@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery</title>
+        <style>
+            #janela {
+                position: absolute;
+                width: 300px;
+                height: 300px;
+                background-color: #069;
+                left: 0; /* Posição inicial para a lateral */
+                top: 300px; /* Posição inicial para o movimento vertical */
+            }
+        </style>
+        <!-- Carregar jQuery de um CDN -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#cima').click(function() {
+                    $('#janela').animate({top: '-=300px'}, 1000); // Movimento para cima em 300px
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <input type="button" id="cima" value="Mover para cima" />
+        <div id="janela"></div>
+    </body>
+</html>
